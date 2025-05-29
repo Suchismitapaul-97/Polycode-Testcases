@@ -1,14 +1,12 @@
+package app;
+
 import java.util.HashMap;
 import java.util.Map;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 public class UserManagementApp {
 
     // User Model
-    static class User {
+    public static class User {
         private String username;
         private String password;
         private String email;
@@ -25,21 +23,21 @@ public class UserManagementApp {
     }
 
     // Custom Exception: UserAlreadyExists
-    static class UserAlreadyExistsException extends Exception {
+    public static class UserAlreadyExistsException extends Exception {
         public UserAlreadyExistsException(String message) {
             super(message);
         }
     }
 
     // Custom Exception: InvalidCredentials
-    static class InvalidCredentialsException extends Exception {
+    public static class InvalidCredentialsException extends Exception {
         public InvalidCredentialsException(String message) {
             super(message);
         }
     }
 
     // Service Layer
-    static class UserService {
+    public static class UserService {
         private Map<String, User> userDatabase = new HashMap<>();
 
         public void registerUser(String username, String password, String email) throws UserAlreadyExistsException {
