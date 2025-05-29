@@ -65,3 +65,4 @@ public class UserManagementApp {
             userDatabase.clear();
         }
     }
+}
